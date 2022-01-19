@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>VUE.JS</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    </head>
+    <body>
+
+<div id="app" v-on:mousemove="updateXY">
+    <input type="text" v-on:input="changeSample">
+    <p>{{ sample }} - Visit my <a v-bind:href="link" target="_blank">website</a>.</p>
+    <p>My favorite tools are:
+    <ul>
+        <li v-for="tool in tools">
+            {{ tool }}
+        </li>
+    </ul>
+    <p>Clicks: {{ clicks }}</p>
+    <button v-on:click="increment" v-on:mouseout="releaseButton">Click!</button>
+    <p>X= {{ x }} | Y= {{ y }}</p>
+</div>
+
+<script src="js/001.js"></script>
+
+    </body>
+</html>
